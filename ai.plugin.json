@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "GDELT Article Search",
+    "name_for_model": "gdeltSearch",
+    "description_for_human": "Search for articles in the GDELT database using a keyword.",
+    "description_for_model": "Help the user search for articles in the GDELT database using a keyword. You can provide a keyword and get a list of articles.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://textkeywordchat-gpt-plugin.naveenjakhad1.repl.co/.well-known/openapi.yaml"
+    },
+    "logo_url": "http://localhost:5000/logo.png",
+    "contact_email": "support@yourdomain.com",
+    "legal_info_url": "http://www.yourdomain.com/legal"
+}

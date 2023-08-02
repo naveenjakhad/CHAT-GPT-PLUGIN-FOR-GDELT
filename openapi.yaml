@@ -1,0 +1,36 @@
+openapi: 3.0.1
+info:
+  title: GDELT Article Search Plugin
+  description: A plugin that allows the user to search for articles in the GDELT database using a keyword.
+  version: 'v1'
+servers:
+  - url: https://textkeywordchat-gpt-plugin.naveenjakhad1.repl.co
+paths:
+  /gdelt_search:
+    get:
+      operationId: gdeltSearch
+      summary: Get a list of articles from GDELT database
+      parameters:
+        - name: keyword
+          in: query
+          description: The keyword to search for in the GDELT database
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gdeltSearchResponse'
+components:
+  schemas:
+    gdeltSearchResponse:
+      type: object
+      properties:
+        articles:
+          type: array
+          items:
+            type: string
+          description: The list of articles.
