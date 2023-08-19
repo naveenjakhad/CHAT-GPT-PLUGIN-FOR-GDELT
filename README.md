@@ -7,9 +7,10 @@ This can be hosted on a server by adding the URL details:-
 I used (GDELT BASE API) Mentioned in the (MAIN.PY) File as (base_url).
 
 Finally, for connection  with ChatGpt,  we have to use the Url from (openAPI.yaml) file and paste it into the ChatGpt Plugin builder.
+
 Note:- How can you run the application locally? 
 
 Go to:- https://textkeywordchatgptplugin.naveenjakhad1.repl.co/gdelt_search
-gdelt_search end point leads to default keyword (china) results 
+gdelt_search end point leads to default keyword (India) results 
 
 In case to  search for any  other keyword format the URL:-  https://textkeywordchatgptplugin.naveenjakhad1.repl.co/gdelt_search?keyword=your_keyword
