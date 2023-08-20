@@ -10,12 +10,12 @@ def get_articles(keyword):
     base_url = "https://api.gdeltproject.org/api/v1/search_ftxtsearch/search_ftxtsearch"
     params = {
         "query": keyword,
-        "output": "artlist",
+        "mode": "artlist",
         "dropdup": "true"
     }
     response = requests.get(base_url, params=params)
     if response.status_code == 200:
-        return response.text.split('\n')
+        return response.text
     else:
         return None
 
@@ -24,7 +24,7 @@ def gdelt_search():
     keyword = request.args.get('keyword', default = 'india', type = str)
     articles = get_articles(keyword)
     if articles:
-        return jsonify(articles)
+        return  articles
     else:
         return jsonify({"message": "No articles found for keyword: " + keyword})
 
